@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,14 @@ Route::get('/', function () {
     //return view('welcome');
     return "hello world";
 });
+
+Route::get('/', [PagesController::class,'index']);
+Route::get('/about',[PagesController::class,'about']);
+
+// Route::get('/about', function(){
+//     return view('pages.about');
+// });
+
 
 // Route::get('/hello', function () {
 //     //return view('welcome');
