@@ -61,3 +61,17 @@ body{
 .index-title{
     text-align: center;
 }
+
+.box1{
+    width: 50%;
+    height: 6rem;
+    align-items: center;
+    background-color: lightsalmon;
+    padding: 2rem;
+    margin: 2rem auto;
+}
+
+.box1-content{
+    display: flex;
+    flex-direction: column;
+}

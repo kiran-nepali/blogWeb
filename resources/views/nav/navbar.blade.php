@@ -65,17 +65,17 @@
     <div class="dropdown">
         <span>BlogWeb</span>
         <div class="dropdown-content">
-            <p><a href="#" class="navlink">Home</a></p>
-            <p><a href="#" class="navlink">About</a></p>
-            <p><a href="#" class="navlink">Link</a></p>
+            <p><a href="/" class="navlink">Home</a></p>
+            <p><a href="/about" class="navlink">About</a></p>
+            <p><a href="/posts" class="navlink">Blog</a></p>
             <p><a href="#" class="navlink">Get In Touch</a></p>
         </div>
     </div>
     <ul class="navbarmenu-list">
         <li class="logo">BlogWeb</li>
-        <li class="navbarmenu-item"><a href="#" class="navlink">Home</a></li>
-        <li class="navbarmenu-item"><a href="#" class="navlink">About</a></li>
-        <li class="navbarmenu-item"><a href="#" class="navlink">Link</a></li>
+        <li class="navbarmenu-item"><a href="/" class="navlink">Home</a></li>
+        <li class="navbarmenu-item"><a href="/about" class="navlink">About</a></li>
+        <li class="navbarmenu-item"><a href="/posts" class="navlink">Blog</a></li>
         <li class="navbarmenu-item"><a href="#" class="navlink">Get In Touch</a></li>
         <li class="navbarmenu-item">
             <span><a href="#" class="navlink">Login</a></span>
