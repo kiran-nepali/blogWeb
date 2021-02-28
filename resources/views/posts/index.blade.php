@@ -5,13 +5,12 @@
 
     @if(count($posts)>0)
         @foreach ($posts as $post)
-            <div class="box1">
-                <div class="box1-content">
-                    <h2><a href="/posts/{{$post->id}}">{{$post->title}}</a></h2>
+                <div class="card p-3 mb-3">
+                    <h3><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3>
                     <small>{{$post->created_at}}</small>
                 </div>
-            </div>
         @endforeach  
+        {{$posts->links()}}
     @else
         <p>No posts found</p>
     @endif

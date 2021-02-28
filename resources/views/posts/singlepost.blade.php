@@ -6,7 +6,7 @@
     <h2>{{$post->title}}</h2>
     <br>
     <div>
-        {{$post->body}}
+        {!!$post->body!!}
     </div>
     <hr>
     <small>{{$post->created_at}}</small>
