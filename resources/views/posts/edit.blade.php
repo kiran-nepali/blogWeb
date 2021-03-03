@@ -2,6 +2,7 @@
 
 @section('content')
     <h1>Edit Post</h1> 
+    @include('validationMsg')
 
     {!! Form::open(['action' => ['App\Http\Controllers\PostsController@update',$post->id],'method'=>'PUT']) !!}
         <div class="form-group">

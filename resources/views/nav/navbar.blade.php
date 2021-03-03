@@ -20,8 +20,25 @@
       </li>
     </ul>
     <ul class="navbar-nav ms-auto">
-      <li class="nav-item"><a href="/" class="nav-link">Login</a></li>
-      <li class="nav-item"><a href="/" class="nav-link">Register</a></li>
+      @auth
+      <li class="nav-item">
+        <a href="#" class="nav-link">{{Auth::user()->username}}</a>
+      </li>
+      <li class="nav-item">
+        <form action="{{route('logout')}}" method="post" class="inline">
+          @csrf
+            <button type="submit" class="p-2 btn btn-outline-* text-light">Logout</button>
+        </form>
+      </li>
+      @endauth
+      @guest
+      <li class="nav-item">
+        <a href="{{route('login')}}" class="nav-link">Login</a>
+      </li>
+      <li class="nav-item">
+        <a href="{{route('register')}}" class="nav-link">Register</a>
+      </li>
+      @endguest
     </ul>
     
   </div>

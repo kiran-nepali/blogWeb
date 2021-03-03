@@ -2,6 +2,7 @@
 
 @section('content')
     <h1>Create Post</h1> 
+    @include('validationMsg')
 
     {!! Form::open(['action' => 'App\Http\Controllers\PostsController@store','method'=>'POST']) !!}
         <div class="form-group">

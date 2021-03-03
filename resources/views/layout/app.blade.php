@@ -15,7 +15,6 @@
     <body>
         @include('nav.navbar')
         <div class="container">
-            @include('validationMsg')
             @yield('content')
         </div>
         <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
