@@ -15,14 +15,20 @@
       <li class="nav-item">
         <a class="nav-link" href="/posts" >Blog</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/posts/create" >Add Post</a>
-      </li>
     </ul>
     <ul class="navbar-nav ms-auto">
       @auth
       <li class="nav-item">
-        <a href="#" class="nav-link">{{Auth::user()->username}}</a>
+        <div class="dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            {{Auth::user()->username}}
+          </a>
+        
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="{{route('dashboard')}}">Dashboard</a></li>
+          </ul>
+        </div>        
+        {{-- <a href="#" class="nav-link">{{Auth::user()->username}}</a> --}}
       </li>
       <li class="nav-item">
         <form action="{{route('logout')}}" method="post" class="inline">

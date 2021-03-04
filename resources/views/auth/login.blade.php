@@ -28,7 +28,14 @@
                         </div>
                         @enderror
                     </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                    <div>
+                        <input type="checkbox" name="remember" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button type="submit" class="btn btn-primary text-center">Login</button>
+                </div>
             </form>
         </div>
 
