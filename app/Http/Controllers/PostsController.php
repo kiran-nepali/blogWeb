@@ -12,6 +12,11 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct(){
+        $this->middleware('auth',['except' =>['index','show']]); //except web routes index and show 
+    }
+
     public function index()
     {
          $posts = Post::orderBy('created_at','desc')->paginate(1);
@@ -57,7 +62,12 @@ class PostsController extends Controller
     public function show($id)
     {
         $post = Post::find($id);
-        return view('posts.singlepost')->with('post',$post);
+        if($post){
+            return view('posts.singlepost')->with('post',$post);
+        }
+        else{
+            return redirect('/posts')->with('error','Unauthorized Access');
+        }
     }
 
     /**
@@ -69,7 +79,15 @@ class PostsController extends Controller
     public function edit($id)
     {
         $post = Post::find($id);
-        return view('posts.edit')->with('post',$post);
+        if($post){
+            if(auth()->user()->id !== $post->user_id){
+                return redirect('/posts')->with('error','Unauthorized Access');
+            }
+            return view('posts.edit')->with('post',$post);
+        }
+        else{
+            return redirect('/posts')->with('error','Unauthorized Access');
+        }
     }
 
     /**
@@ -101,6 +119,9 @@ class PostsController extends Controller
     public function destroy($id)
     {
         $post=Post::find($id);
+        if(auth()->user()->id !== $post->user_id){
+            return redirect('/posts')->with('error','Unauthorized Access');
+        }
         $post->delete();
         return redirect('/posts')->with('success',"Post successfully deleted");
     }

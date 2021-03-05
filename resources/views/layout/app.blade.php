@@ -9,6 +9,7 @@
         {{-- <link rel="stylesheet" href="{{asset('css/custom.css')}}"> --}}
         {{-- <script src="https://cdn.ckeditor.com/ckeditor5/25.0.0/classic/ckeditor.js"></script> --}}
         <script src="//cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
         <title>{{config('app.name','BlogWeb')}}</title>
 
     </head>
