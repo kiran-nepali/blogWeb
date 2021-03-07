@@ -4,12 +4,13 @@
     <h1 class="index-title">Posts</h1>
     <br>
     <h2>{{$post->title}}</h2>
+    <small>{{$post->created_at}}  by {{$post->user->name}}</small>
     <br>
     <div>
+        <img style="width:100%" src="/storage/cover_images/{{$post->cover_image}}" alt="">
         {!!$post->body!!}
     </div>
     <hr>
-    <small>{{$post->created_at}}  by {{$post->user->name}}</small>
     <hr>
     @if(!Auth::guest())
         @if(Auth::user()->id == $post->user_id)
