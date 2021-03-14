@@ -12,9 +12,6 @@
       <li class="nav-item">
         <a class="nav-link" href="/about">About</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/posts" >Blog</a>
-      </li>
     </ul>
     <ul class="navbar-nav ms-auto">
       @auth

@@ -16,6 +16,6 @@
         <div class="form-group">
             {{Form::file('cover_image')}}
         </div>
-        {{Form::submit('Submit',['class'=>'btn btn-default'])}}
+        {{Form::submit('Submit',['class'=>'btn btn-secondary'])}}
     {!! Form::close() !!}
 @endsection

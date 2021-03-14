@@ -20,7 +20,7 @@ class PostsController extends Controller
 
     public function index()
     {
-         $posts = Post::orderBy('created_at','desc')->paginate(1);
+         $posts = Post::orderBy('created_at','desc')->paginate(2);
         return view('posts.index')->with('posts',$posts);
     }
 
@@ -64,7 +64,7 @@ class PostsController extends Controller
         $post->user_id = auth()->user()->id;
         $post->cover_image = $fileNameToStore;
         $post->save();
-        return redirect('/posts')->with('success',"Post successfully created");
+        return redirect('/')->with('success',"Post successfully created");
     }
 
     /**
@@ -80,7 +80,7 @@ class PostsController extends Controller
             return view('posts.singlepost')->with('post',$post);
         }
         else{
-            return redirect('/posts')->with('error','Unauthorized Access');
+            return redirect('/')->with('error','Unauthorized Access');
         }
     }
 
@@ -100,7 +100,7 @@ class PostsController extends Controller
             return view('posts.edit')->with('post',$post);
         }
         else{
-            return redirect('/posts')->with('error','Unauthorized Access');
+            return redirect('/')->with('error','Unauthorized Access');
         }
     }
 
@@ -135,7 +135,7 @@ class PostsController extends Controller
         }
 
         $post->save();
-        return redirect('/posts')->with('success',"Post successfully updated");
+        return redirect('/')->with('success',"Post successfully updated");
     }
 
     /**
@@ -155,6 +155,6 @@ class PostsController extends Controller
         }
 
         $post->delete();
-        return redirect('/posts')->with('success',"Post successfully deleted");
+        return redirect('/')->with('success',"Post successfully deleted");
     }
 }

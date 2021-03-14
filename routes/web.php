@@ -33,8 +33,11 @@ Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard')
 Route::post('/logout',[LogoutController::class,'store'])->name('logout');
 
 
-Route::get('/', [PagesController::class,'index']);
+// Route::get('/', [PagesController::class,'index']);
 Route::get('/about',[PagesController::class,'about']);
-Route::resource('posts',PostsController::class);
+
+Route::resource('posts',PostsController::class,['except'=>['index']]);
+Route::get('/',[PostsController::class,'index']);
+
 
 

@@ -17,7 +17,7 @@
                     </div>                    
                 </div>
         @endforeach  
-        {{$posts->links()}}
+        <div class="d-flex justify-content-center">{{$posts->links()}}</div>
     @else
         <p>No posts found</p>
     @endif
