@@ -17,3 +17,4 @@ The website provides following features:
 - Only authorized user can edit or delete their own post
 - User can upload picture of max 2mb size while creating post
 
+Please check the website in http://blogweb-kiran.co.uk/
