@@ -13,11 +13,15 @@
         <title>{{config('app.name','BlogWeb')}}</title>
 
     </head>
-    <body>
+    <body class="d-flex flex-column min-vh-100">
         @include('nav.navbar')
         <div class="container">
             @yield('content')
         </div>
+        <footer class="bg-light text-center text-lg-start mt-auto">
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+              © 2020 Copyright by Kiran Nepali
+            </div>
         <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
         <script>
             CKEDITOR.replace( 'article-ckeditor' );

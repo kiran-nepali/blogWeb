@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('content')
-    <h1 class="index-title">Posts</h1>
+    <h1 class="index-title m-4">Posts</h1>
 
     @if(count($posts)>0)
         @foreach ($posts as $post)

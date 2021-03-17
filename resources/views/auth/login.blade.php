@@ -12,7 +12,7 @@
                 @csrf
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="text" name="email" class="form-control @error('email')border border-danger @enderror" id="email" placeholder="Email" value={{old("email")}}>
+                    <input type="text" name="email" class="form-control form-control-lg @error('email')border border-danger @enderror" id="email" placeholder="Email" value={{old("email")}}>
                         @error('email')
                         <div class="text-danger">
                             {{$message}}
@@ -21,7 +21,7 @@
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" name="password" class="form-control @error('password')border border-danger @enderror" id="password" placeholder="Password">
+                        <input type="password" name="password" class="form-control form-control-lg @error('password')border border-danger @enderror" id="password" placeholder="Password">
                         @error('password')
                         <div class="text-danger">
                             {{$message}}
